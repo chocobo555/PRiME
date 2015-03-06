@@ -16,7 +16,7 @@ public class VisionCone : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		/*
+
 		Quaternion myTempRot = GetComponent<RectTransform>().localRotation;// .rotation;
 		
 		//myTempRot.z = vision.transform.localRotation.eulerAngles.y;
@@ -24,28 +24,26 @@ public class VisionCone : MonoBehaviour
 		
 		myTempRot.z *= -1;
 
+
 		myTempRot.z = Mathf.Clamp(myTempRot.z, -45, 45); 
+		//Mathf.Clamp(myTempRot.z, 0, 45);
+		print(myTempRot.eulerAngles.z);
 
 
-		Mathf.Clamp(myTempRot.z, -315, 45);
-
-		GetComponent<RectTransform>().localRotation = myTempRot;
-		*/
+		//GetComponent<RectTransform>().rotation = myTempRot;
 
 
-
-
+		/*
 		if (transform.rotation.y > 45 && transform.rotation.y < 315) 
 		{
 			
 			transform.Rotate(0, 0, vision.GetComponent<TurnWithRift>().turnSpeed * Time.deltaTime);
 
 		}
-
-		
-
-
+		*/
 	}
+
+
 }
 
 

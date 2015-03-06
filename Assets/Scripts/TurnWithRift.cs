@@ -47,12 +47,12 @@ public class TurnWithRift : MonoBehaviour
 
 			if (enteredRadiusRight == true) 
 			{
-				print ("over 45");
+//				print ("over 45");
 				body.transform.Rotate(0, turnSpeed * Time.deltaTime, 0);
 			}
 			else if(enteredRadiusLeft == true)
 			{
-				print ("under 315");
+//				print ("under 315");
 				body.transform.Rotate(0, -turnSpeed * Time.deltaTime, 0);
 			}
 
