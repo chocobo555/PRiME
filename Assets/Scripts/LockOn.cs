@@ -8,12 +8,16 @@ public class LockOn : MonoBehaviour
 	public KeyCode scan = KeyCode.E;
 	GameObject scannerMonitor1;
 	GameObject scannerMonitor2;
-	
+	Text scannedObject;
+
+
 	// Use this for initialization
 	void Start () 
 	{
 		scannerMonitor1 = GameObject.Find ("Scanner Monitor1");
 		scannerMonitor2 = GameObject.Find ("Scanner Monitor2");
+
+		//scannedObject = scannerMonitor1.GetComponent<Text>();
 	}
 
 
@@ -29,6 +33,7 @@ public class LockOn : MonoBehaviour
 			if (hit.collider != null) 
 			{
 				scannerMonitor1.GetComponent<Text>().text = hit.collider.gameObject.name;
+				//scannedObject.text = hit.collider.gameObject.name;
 				scannerMonitor2.GetComponent<Text>().text = hit.collider.gameObject.name;
 
 				print(hit.collider.gameObject.name);

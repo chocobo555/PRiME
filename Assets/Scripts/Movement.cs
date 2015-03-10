@@ -4,7 +4,6 @@ using System.Collections;
 public class Movement : MonoBehaviour 
 {
 	public float groundSpeed = 6.0f;
-	public float turnSpeed = 60.0f;
 	public float jumpSpeed = 8.0f;
 	public float gravity = 20.0f;
 	public float rotationSpeed;
@@ -25,19 +24,27 @@ public class Movement : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
+		/*
 		float turn = Input.GetAxis("Horizontal");
 		transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+		*/
 
 		if(myController.isGrounded == true) 
 		{
-			// old
+			// older
 			/*
 			moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
 			*/
 
-			//new
-			moveDirection = transform.forward * Input.GetAxis("Vertical");
+			//older
+			//moveDirection = transform.forward * Input.GetAxis("Vertical");
+			//moveDirection = transform.right * Input.GetAxis("Horizontal");
+
+			//current
+			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+			moveDirection = transform.TransformDirection(moveDirection);
+
 
 			moveDirection *= groundSpeed;
 
