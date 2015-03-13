@@ -3,7 +3,8 @@ using System.Collections;
 
 public class BodyFacingDirection : MonoBehaviour 
 {
-	public GameObject body;
+	GameObject body;
+
 
 	// Use this for initialization
 	void Start () 
@@ -15,31 +16,47 @@ public class BodyFacingDirection : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		Quaternion myTempRot = GetComponent<RectTransform>().localRotation;// .rotation;
+		
+		transform.rotation = body.transform.rotation;
 
-		myTempRot.z = body.transform.rotation.y;
-
-		myTempRot.z *= -1;
-
-		//myTempRot.x = 0;
-		Mathf.Clamp01(myTempRot.x);
-
-		//myTempRot.y = 0;
-		Mathf.Clamp01(myTempRot.y);
-
-		GetComponent<RectTransform>().localRotation = myTempRot;
-
-
-
-		//float bodyTempRot = body.transform.rotation.y;
-
-		//transform.rotation.x = bodyTempRot;
-
+		//******************************************************************
 
 		/*
-		Vector3 pos = transform.position;
-		pos.x = 4;
-		transform.position = pos;
+		Quaternion tempRot = transform.rotation;
+
+		tempRot.x = 0;
+
+		tempRot.y = 0;
+
+		tempRot.z = body.transform.rotation.y;
+
+		transform.rotation = tempRot;
 		*/
+
+		//*******************************************************************
+
+		/*
+		Vector3 tempVec = transform.localEulerAngles;// rotation;
+		
+		tempVec.z = body.transform.localEulerAngles.y;// .rotation.y;
+		
+		tempVec.z *= -1;
+		
+		transform.localEulerAngles = tempVec;
+		*/
+
+		//*******************************************************************
+
+		/*
+		Vector3 euler = transform.rotation.eulerAngles;
+		Quaternion rot = Quaternion.Euler(0, 0, euler.y);
+		transform.rotation = rot;
+		*/
+
 	}
 }
+
+
+
+
+

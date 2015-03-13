@@ -46,6 +46,7 @@ public class Movement : MonoBehaviour
 			moveDirection = transform.TransformDirection(moveDirection);
 
 
+
 			moveDirection *= groundSpeed;
 
 			if(Input.GetButton("Jump")) 
@@ -56,6 +57,8 @@ public class Movement : MonoBehaviour
 
 		moveDirection.y -= gravity * Time.deltaTime;
 		myController.Move(moveDirection * Time.deltaTime);
+
+
 
 
 		/*

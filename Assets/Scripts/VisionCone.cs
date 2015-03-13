@@ -4,9 +4,11 @@ using System.Collections;
 public class VisionCone : MonoBehaviour 
 {
 	public GameObject vision;
+	public GameObject bodyDir;
 	public float rotSpeed = 10;
 
 	Quaternion tempRot;
+	Vector3 tempPos;
 
 
 	// Use this for initialization
@@ -20,14 +22,24 @@ public class VisionCone : MonoBehaviour
 	void Update () 
 	{
 
-		tempRot = transform.rotation;
+		Vector3 tempVec = transform.localEulerAngles;// rotation;
 
-		tempRot.z = vision.transform.rotation.y;
-		tempRot.z = Mathf.Clamp(tempRot.z, -45, 45);
+		tempVec.z = vision.transform.localEulerAngles.y;// .rotation.y;
 
-		tempRot.z *= -1;
+		tempPos = bodyDir.transform.position;
 
-		transform.rotation = Quaternion.Slerp(transform.rotation, tempRot, rotSpeed * Time.deltaTime); 
+		tempVec.z *= -1;
+
+		transform.localEulerAngles = tempVec;
+
+		//transform.position = tempPos;
+		//transform.localEulerAngles = Quaternion.Slerp(transform.rotation, tempRot, rotSpeed * Time.deltaTime); 
+
+
+
+
+
+
 
 	}
 
