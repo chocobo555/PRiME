@@ -4,6 +4,8 @@ using System.Collections;
 public class arrow2Test : MonoBehaviour 
 {
 	GameObject body;
+
+	public GameObject arrow1;
 	
 	
 	// Use this for initialization
@@ -18,8 +20,8 @@ public class arrow2Test : MonoBehaviour
 	{
 
 		Vector3 tempVec = transform.localEulerAngles;// rotation;
-		
-		tempVec.x = body.transform.localEulerAngles.y;// .rotation.y;
+
+		tempVec.z = arrow1.transform.localEulerAngles.y;// .rotation.y;
 		
 		tempVec.z *= -1;
 		
