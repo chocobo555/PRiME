@@ -17,7 +17,7 @@ public class BodyFacingDirection : MonoBehaviour
 	void Update () 
 	{
 		
-		transform.rotation = body.transform.rotation;
+		transform.rotation = body.transform.rotation; // used to create alignment GUI
 
 		//******************************************************************
 
