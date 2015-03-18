@@ -10,9 +10,6 @@ public class LockOn : MonoBehaviour
 	GameObject scannerMonitor2;
 	Text scannedObject;
 
-	[HideInInspector]
-	public Vector3 fwd;
-
 
 	// Use this for initialization
 	void Start () 
@@ -30,7 +27,7 @@ public class LockOn : MonoBehaviour
 
 		if (Input.GetKeyDown(scan)) 
 		{
-			fwd = transform.TransformDirection(Vector3.forward);
+			Vector3 fwd = transform.TransformDirection(Vector3.forward);
 			RaycastHit hit;
 			Physics.Raycast(transform.position, fwd, out hit, 10); 
 			if (hit.collider != null) 

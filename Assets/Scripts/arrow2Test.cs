@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class VisionAlignment : MonoBehaviour 
+public class arrow2Test : MonoBehaviour 
 {
 	GameObject body;
 	
@@ -11,15 +11,19 @@ public class VisionAlignment : MonoBehaviour
 	{
 		body = GameObject.Find("OVRPlayerController");
 	}
-	
+
 	
 	// Update is called once per frame
 	void Update () 
 	{
+
+		Vector3 tempVec = transform.localEulerAngles;// rotation;
 		
-		transform.rotation = body.transform.rotation; // used to create alignment GUI
-	
+		tempVec.x = body.transform.localEulerAngles.y;// .rotation.y;
+		
+		tempVec.z *= -1;
+		
+		transform.localEulerAngles = tempVec;
+
 	}
-
-
 }
