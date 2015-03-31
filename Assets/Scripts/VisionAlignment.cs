@@ -18,6 +18,7 @@ public class VisionAlignment : MonoBehaviour
 	{
 		
 		transform.rotation = body.transform.rotation; // used to create alignment GUI
+
 	
 	}
 
