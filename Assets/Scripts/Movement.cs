@@ -18,7 +18,8 @@ public class Movement : MonoBehaviour
 	public float rotationSpeed;
 
 	private CharacterController myController;
-	//private KeyCode walkForwardKey = KeyCode.W;
+	private AudioMaster AM;
+
 	[HideInInspector]
 	public Vector3 moveDirection = Vector3.zero;
 
@@ -30,7 +31,7 @@ public class Movement : MonoBehaviour
 		myController = GetComponent<CharacterController>();
 		JumpForceSlider1 = GameObject.Find("JumpForceSlider1");
 		jumpForceSlider2 = GameObject.Find("JumpForceSlider2");
-
+		AM = GameObject.Find("CenterEyeAnchor").GetComponent<AudioMaster>();
 
 	}
 
@@ -86,12 +87,18 @@ public class Movement : MonoBehaviour
 			moveDirection = transform.TransformDirection(moveDirection);
 			moveDirection *= groundSpeed;
 
+			AM.audioSource.Stop();
 
 			if(Input.GetButton("Jump")) 
 			{
 
 				moveDirection.y = TempJumpHeight;
 				moveDirection.z *= TempJumpLength;
+
+				Vector3 tempvec = new Vector3();
+				tempvec = Vector3.ClampMagnitude(tempvec, 10f);
+
+				AM.JumpSound();
 
 				print(jumpHeight);
 			

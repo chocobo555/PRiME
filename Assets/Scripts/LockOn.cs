@@ -51,7 +51,7 @@ public class LockOn : MonoBehaviour
 
 				if (hit.collider.name == "Goal1") 
 				{
-					goalGUI.sprite.
+					//goalGUI.sprite.
 				}
 			}
 		}
