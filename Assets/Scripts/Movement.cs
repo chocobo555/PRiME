@@ -91,14 +91,16 @@ public class Movement : MonoBehaviour
 
 			if(Input.GetButton("Jump")) 
 			{
-
+				moveDirection *= TempJumpLength;
 				moveDirection.y = TempJumpHeight;
-				moveDirection.z *= TempJumpLength;
 
+
+				// *****************possible fix
 				Vector3 tempvec = new Vector3();
 				tempvec = Vector3.ClampMagnitude(tempvec, 10f);
+				// ****************************
 
-				AM.JumpSound();
+				//AM.JumpSound();
 
 				print(jumpHeight);
 			
@@ -119,6 +121,8 @@ public class Movement : MonoBehaviour
 
 		moveDirection.y -= gravity * Time.deltaTime;
 		myController.Move(moveDirection * Time.deltaTime);
+
+		print(moveDirection);
 
 
 		/*
