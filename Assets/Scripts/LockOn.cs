@@ -10,7 +10,9 @@ public class LockOn : MonoBehaviour
 	GameObject scannerMonitor2;
 	Text scannedObject;
 
-	Image goalGUI;
+	Image goalGUI1;
+	Image goalGUI2;
+	Image goalGUI3;
 
 	public int lockOnRange = 60;
 
@@ -26,7 +28,13 @@ public class LockOn : MonoBehaviour
 		scannerMonitor1 = GameObject.Find("Scanner Monitor1");
 		scannerMonitor2 = GameObject.Find("Scanner Monitor2");
 
-		goalGUI = GameObject.Find("GoalGUI").GetComponent<Image>();
+		goalGUI1 = GameObject.Find("GoalGUI1").GetComponent<Image>();
+		goalGUI2 = GameObject.Find("GoalGUI2").GetComponent<Image>();
+		goalGUI3 = GameObject.Find("GoalGUI3").GetComponent<Image>();
+
+		goalGUI1.enabled = false;
+		goalGUI2.enabled = false;
+		goalGUI3.enabled = false;
 
 		//scannedObject = scannerMonitor1.GetComponent<Text>();
 	}
@@ -51,7 +59,8 @@ public class LockOn : MonoBehaviour
 
 				if (hit.collider.name == "Goal1") 
 				{
-					//goalGUI.sprite.
+					goalGUI1.enabled = true;
+					goalGUI2.enabled = true;
 				}
 			}
 		}
