@@ -10,9 +10,13 @@ public class LockOn : MonoBehaviour
 	GameObject scannerMonitor2;
 	Text scannedObject;
 
-	Image goalGUI1;
-	Image goalGUI2;
-	Image goalGUI3;
+	Image goalGUI1_1;
+	Image goalGUI1_2;
+	Image goalGUI1_3;
+
+	Image goalGUI2_1;
+	Image goalGUI2_2;
+	Image goalGUI2_3;
 
 	public int lockOnRange = 60;
 
@@ -28,13 +32,21 @@ public class LockOn : MonoBehaviour
 		scannerMonitor1 = GameObject.Find("Scanner Monitor1");
 		scannerMonitor2 = GameObject.Find("Scanner Monitor2");
 
-		goalGUI1 = GameObject.Find("GoalGUI1").GetComponent<Image>();
-		goalGUI2 = GameObject.Find("GoalGUI2").GetComponent<Image>();
-		goalGUI3 = GameObject.Find("GoalGUI3").GetComponent<Image>();
+		goalGUI1_1 = GameObject.Find("GoalGUI1_1").GetComponent<Image>();
+		goalGUI1_2 = GameObject.Find("GoalGUI1_2").GetComponent<Image>();
+		goalGUI1_3 = GameObject.Find("GoalGUI1_3").GetComponent<Image>();
 
-		goalGUI1.enabled = false;
-		goalGUI2.enabled = false;
-		goalGUI3.enabled = false;
+		goalGUI2_1 = GameObject.Find("GoalGUI2_1").GetComponent<Image>();
+		goalGUI2_2 = GameObject.Find("GoalGUI2_2").GetComponent<Image>();
+		goalGUI2_3 = GameObject.Find("GoalGUI2_3").GetComponent<Image>();
+
+		goalGUI1_1.enabled = false;
+		goalGUI1_2.enabled = false;
+		goalGUI1_3.enabled = false;
+
+		goalGUI2_1.enabled = false;
+		goalGUI2_2.enabled = false;
+		goalGUI2_3.enabled = false;
 
 		//scannedObject = scannerMonitor1.GetComponent<Text>();
 	}
@@ -59,9 +71,57 @@ public class LockOn : MonoBehaviour
 
 				if (hit.collider.name == "Goal1") 
 				{
-					goalGUI1.enabled = true;
-					goalGUI2.enabled = true;
+					goalGUI1_1.enabled = true;
+					goalGUI2_1.enabled = true;
 				}
+
+				if (hit.collider.name == "Goal2") 
+				{
+					goalGUI1_2.enabled = true;
+					goalGUI2_2.enabled = true;
+				}
+
+				if (hit.collider.name == "Goal3") 
+				{
+					goalGUI1_3.enabled = true;
+					goalGUI2_3.enabled = true;
+				}
+
+
+				if (hit.collider.name == "Goal1") 
+				{
+					goalGUI1_1.enabled = true;
+					goalGUI2_1.enabled = true;
+				}
+				
+				if (hit.collider.name == "Goal2") 
+				{
+					goalGUI1_2.enabled = true;
+					goalGUI2_2.enabled = true;
+				}
+				
+				if (hit.collider.name == "Goal3") 
+				{
+					goalGUI1_3.enabled = true;
+					goalGUI2_3.enabled = true;
+				}
+
+				bool goalGUI1 = false;
+				bool goalGUI2 = false;
+				bool goalGUI3 = false;
+
+				if(goalGUI1_1.enabled == true && goalGUI2_1.enabled == true)
+					goalGUI1 = true;
+
+				if(goalGUI1_2.enabled == true && goalGUI2_2.enabled == true)
+					goalGUI2 = true;
+
+				if(goalGUI1_3.enabled == true && goalGUI2_3.enabled == true)
+					goalGUI3 = true;
+
+				if (goalGUI1 == true && goalGUI2 == true && goalGUI3 == true) 
+					Application.LoadLevel("Main");
+			
 			}
 		}
 	}	
