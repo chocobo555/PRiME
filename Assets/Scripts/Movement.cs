@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class Movement : MonoBehaviour 
 {
-	public float groundSpeed = 6.0f;
+	private float groundSpeed = 3.0f;
 	public float airSpeed = 3.0f;
 	public float airDrift = 1f;
 
-	public float jumpHeight = 5.0f;
-	public float jumpLength = 1.0f;
+	public float jumpHeight = 7.0f;
+	public float jumpLength = .1f;
 	public float jumpForce = 1f;
 	GameObject JumpForceSlider1;
 	GameObject jumpForceSlider2;
@@ -85,7 +85,27 @@ public class Movement : MonoBehaviour
 			//current
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
+
+
+
+
+			Vector3 velocity = new Vector3(1, 0, 0);
+			float tempGroundSpeed;
+			if(myController.velocity.z > velocity.z)
+			{
+				tempGroundSpeed = groundSpeed * 1.1F;
+			}
+			else 
+			{
+				tempGroundSpeed = groundSpeed;
+			}
+			print(tempGroundSpeed);
+
 			moveDirection *= groundSpeed;
+
+
+
+
 
 			AM.audioSource.Stop();
 
@@ -122,7 +142,7 @@ public class Movement : MonoBehaviour
 		moveDirection.y -= gravity * Time.deltaTime;
 		myController.Move(moveDirection * Time.deltaTime);
 
-		print(moveDirection);
+		//print(moveDirection);
 
 
 		/*
