@@ -1,0 +1,71 @@
+Initialize engine version: 4.6.2f1 (bd99309c2ad7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.4052]
+    Renderer: NVIDIA Quadro FX 3800
+    Vendor:   NVIDIA
+    VRAM:     989 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\NGUI.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\NGUI.dll into Unity Child Domain
+- Completed reload, in  0.095 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1200 59Hz; virtual: 3840x1200 at 0,0
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\System.Core.dll (this message is harmless)
+UnloadTime: 0.956475 ms
+Initialize engine version: 4.6.2f1 (bd99309c2ad7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.4052]
+    Renderer: NVIDIA Quadro FX 3800
+    Vendor:   NVIDIA
+    VRAM:     989 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\NGUI.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\NGUI.dll into Unity Child Domain
+- Completed reload, in  0.055 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1200 59Hz; virtual: 3840x1200 at 0,0
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\System.Core.dll (this message is harmless)
+Initialize engine version: 4.6.2f1 (bd99309c2ad7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.4052]
+    Renderer: NVIDIA Quadro FX 3800
+    Vendor:   NVIDIA
+    VRAM:     989 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\NGUI.dll (this message is harmless)
+Loading C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\NGUI.dll into Unity Child Domain
+- Completed reload, in  0.051 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 75Hz; virtual: 3840x1200 at -1920,0
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\ian.harris1\Desktop\PRiME\build1_Data\Managed\System.Core.dll (this message is harmless)
+UnloadTime: 0.825571 ms

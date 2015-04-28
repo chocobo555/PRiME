@@ -61,25 +61,6 @@ public class Movement : MonoBehaviour
 		if (jumpForce > 4) 
 			jumpForce = 4;
 
-		/*
-		float scrollDirection = Input.GetAxis ("Mouse ScrollWheel");
-		if (scrollDirection > 0) 
-		{
-			jumpForce = jumpForce + .5f;
-		}
-		if (scrollDirection < 0) 
-		{
-			jumpForce = jumpForce - .5f;
-		}
-		if (jumpForce < 1) 
-		{
-			jumpForce = 1;
-		}
-		if (jumpForce > 6) 
-		{
-			jumpForce = 6;
-		}
-		*/
 
 		JumpForceSlider1.GetComponent<Slider>().value = jumpForce;
 //		JumpForceSlider2.GetComponent<Slider>().value = jumpForce;
