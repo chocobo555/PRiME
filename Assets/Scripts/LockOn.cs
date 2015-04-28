@@ -36,17 +36,17 @@ public class LockOn : MonoBehaviour
 		goalGUI1_2 = GameObject.Find("GoalGUI1_2").GetComponent<Image>();
 		goalGUI1_3 = GameObject.Find("GoalGUI1_3").GetComponent<Image>();
 
-		goalGUI2_1 = GameObject.Find("GoalGUI2_1").GetComponent<Image>();
-		goalGUI2_2 = GameObject.Find("GoalGUI2_2").GetComponent<Image>();
-		goalGUI2_3 = GameObject.Find("GoalGUI2_3").GetComponent<Image>();
+		//goalGUI2_1 = GameObject.Find("GoalGUI2_1").GetComponent<Image>();
+		//goalGUI2_2 = GameObject.Find("GoalGUI2_2").GetComponent<Image>();
+		//goalGUI2_3 = GameObject.Find("GoalGUI2_3").GetComponent<Image>();
 
 		goalGUI1_1.enabled = false;
 		goalGUI1_2.enabled = false;
 		goalGUI1_3.enabled = false;
 
-		goalGUI2_1.enabled = false;
-		goalGUI2_2.enabled = false;
-		goalGUI2_3.enabled = false;
+		//goalGUI2_1.enabled = false;
+		//goalGUI2_2.enabled = false;
+		//goalGUI2_3.enabled = false;
 
 		//scannedObject = scannerMonitor1.GetComponent<Text>();
 	}
@@ -65,7 +65,7 @@ public class LockOn : MonoBehaviour
 			{
 				scannerMonitor1.GetComponent<Text>().text = hit.collider.gameObject.name;
 				//scannedObject.text = hit.collider.gameObject.name;
-				scannerMonitor2.GetComponent<Text>().text = hit.collider.gameObject.name;
+				//scannerMonitor2.GetComponent<Text>().text = hit.collider.gameObject.name;
 
 				print(hit.collider.gameObject.name);
 

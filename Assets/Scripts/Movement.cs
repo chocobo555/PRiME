@@ -82,7 +82,7 @@ public class Movement : MonoBehaviour
 		*/
 
 		JumpForceSlider1.GetComponent<Slider>().value = jumpForce;
-		JumpForceSlider2.GetComponent<Slider>().value = jumpForce;
+//		JumpForceSlider2.GetComponent<Slider>().value = jumpForce;
 		//print(jumpForce);
 
 		float TempJumpHeight = jumpHeight * (jumpForce / 2);
@@ -120,7 +120,7 @@ public class Movement : MonoBehaviour
 
 
 			SprintForceSlider1.GetComponent<Slider>().value = sprintForce;
-			SprintForceSlider2.GetComponent<Slider>().value = sprintForce;
+			//SprintForceSlider2.GetComponent<Slider>().value = sprintForce;
 
 
 			if(groundSpeed > sprintForce)
