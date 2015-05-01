@@ -63,8 +63,6 @@ public class Movement : MonoBehaviour
 
 
 		JumpForceSlider1.GetComponent<Slider>().value = jumpForce;
-//		JumpForceSlider2.GetComponent<Slider>().value = jumpForce;
-		//print(jumpForce);
 
 		float TempJumpHeight = jumpHeight * (jumpForce / 2);
 		float TempJumpLength = jumpLength * (jumpForce / 2);
@@ -72,16 +70,6 @@ public class Movement : MonoBehaviour
 
 		if(myController.isGrounded == true) 
 		{
-			// older
-			/*
-			moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
-			moveDirection = transform.TransformDirection(moveDirection);
-			*/
-
-			//older
-			//moveDirection = transform.forward * Input.GetAxis("Vertical");
-			//moveDirection = transform.right * Input.GetAxis("Horizontal");
-
 			//current
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 			moveDirection = transform.TransformDirection(moveDirection);
@@ -99,10 +87,7 @@ public class Movement : MonoBehaviour
 			if(sprintForce > 30)
 				sprintForce = 30;
 
-
 			SprintForceSlider1.GetComponent<Slider>().value = sprintForce;
-			//SprintForceSlider2.GetComponent<Slider>().value = sprintForce;
-
 
 			if(groundSpeed > sprintForce)
 				groundSpeed = sprintForce;
@@ -119,7 +104,7 @@ public class Movement : MonoBehaviour
 
 			AM.audioSource.Stop();
 
-			if(Input.GetButton("Jump")) 
+			if(Input.GetKeyDown(KeyCode.Space)) 
 			{
 				moveDirection *= TempJumpLength;
 				moveDirection.y = TempJumpHeight + (moveDirection.magnitude / 1.5F);
@@ -139,33 +124,10 @@ public class Movement : MonoBehaviour
 			Vector3 tempVec = new Vector3(Input.GetAxis("Horizontal") * Time.deltaTime * airDrift, 0, Input.GetAxis("Vertical") * Time.deltaTime * airSpeed);
 			moveDirection += transform.TransformDirection(tempVec);
 
-			//moveDirection += transform.TransformDirection(Vector3(Input.GetAxis("Horizontal") * Time.deltaTime * airDrift, 0, Input.GetAxis("Vertical") * Time.deltaTime * airSpeed));
 		}
 
 		moveDirection.y -= gravity * Time.deltaTime;
 		myController.Move(moveDirection * Time.deltaTime);
-
-		//print(moveDirection);
-
-
-		/*
-		float rotation = Input.GetAxis ("Horizontal") * rotationSpeed;
-		rotation *= Time.deltaTime;
-		transform.Rotate(0, rotation, 0);
-		*/
-
-
-	}
-
-
-	void FixedUpdate()
-	{
-		/*
-		if (Input.GetKey(walkForwardKey)) 
-		{
-			rigidbody.AddForce(Vector3.forward * groundSpeed, ForceMode.Acceleration);
-		}
-		*/
 
 	}
 
