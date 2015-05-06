@@ -16,9 +16,8 @@ public class VisionAlignment : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		
-		transform.rotation = body.transform.rotation; // used to create alignment GUI
 
+		transform.rotation =  body.transform.rotation;
 	
 	}
 
