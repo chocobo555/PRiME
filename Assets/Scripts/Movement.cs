@@ -28,6 +28,11 @@ public class Movement : MonoBehaviour
 	[HideInInspector]
 	public Vector3 moveDirection = Vector3.zero;
 
+	[HideInInspector]
+	public float windVolume = 0;
+
+	float myAverageVel = 0;
+
 
 
 	// Use this for initialization
@@ -102,7 +107,7 @@ public class Movement : MonoBehaviour
 			moveDirection *= groundSpeed;
 
 
-			AM.audioSource.Stop();
+			AM.jumpAudioSource.Stop();
 
 			if(Input.GetKeyDown(KeyCode.Space)) 
 			{
@@ -128,6 +133,14 @@ public class Movement : MonoBehaviour
 
 		moveDirection.y -= gravity * Time.deltaTime;
 		myController.Move(moveDirection * Time.deltaTime);
+
+
+		myAverageVel = (myController.velocity.z + myController.velocity.x) / 2;
+
+		if (myAverageVel > 20) 
+			myAverageVel = 20;
+
+		windVolume = myAverageVel / 20;
 
 	}
 

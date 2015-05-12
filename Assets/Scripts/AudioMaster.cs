@@ -10,31 +10,49 @@ public class AudioMaster : MonoBehaviour
 	
 	*/
 
-	public AudioSource audioSource;
+	Movement myMovement;
+
+	public AudioSource jumpAudioSource;
 	public AudioClip jumpAudioClip;
+
+	public AudioSource windAudioSource;
+	public AudioClip windAudioClip;
 
 
 
 	// Use this for initialization
 	void Start () 
 	{
-		audioSource = this.gameObject.AddComponent<AudioSource>();
+		myMovement = GameObject.Find("OVRPlayerController").GetComponent<Movement>();
+
+		jumpAudioSource = this.gameObject.AddComponent<AudioSource>();
+		//windAudioSource = this.gameObject.AddComponent<AudioSource>();
+
+		windAudioSource.clip = windAudioClip;
+
+		//windAudioSource.Play();
+
 	}
 
 
 	public void JumpSound()
 	{
 
-		audioSource.clip = jumpAudioClip;
-		audioSource.Play();
+		jumpAudioSource.clip = jumpAudioClip;
+		jumpAudioSource.Play();
 
 	}
+
 
 
 	// Update is called once per frame
 	void Update () 
 	{
+		windAudioSource.volume = myMovement.windVolume;
+
+		print (windAudioSource.volume);
 		
+
 	}
 
 }
