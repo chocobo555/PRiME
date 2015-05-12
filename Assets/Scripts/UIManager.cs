@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour
 
 	public GUIStyle mainStyle;
 	public GUIStyle buttonStyle;
-
+	
 	private string main = "main";
 	private string options = "options";
 	private string credits = "credits";
@@ -67,7 +67,7 @@ public class UIManager : MonoBehaviour
 	{
 		if (GUILayout.Button("Play Game", buttonStyle))
 		{
-			Application.LoadLevel("scene1");
+			StartCoroutine("OculusFunc");
 		}
 		if (GUILayout.Button("Options", buttonStyle)) 
 		{
@@ -93,6 +93,13 @@ public class UIManager : MonoBehaviour
 			menuState = main;
 	}
 
+
+	IEnumerator OculusFunc()
+	{
+		GUILayout.Box("Please put on the Oculus Rift virtual reality headset and look directly forward so you are facing the Oculus Rift Camera.", mainStyle);
+		yield return new WaitForSeconds(10);
+		Application.LoadLevel("scene1");
+	}
 
 	// Update is called once per frame
 	void Update () 

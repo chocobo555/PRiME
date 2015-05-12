@@ -3,13 +3,13 @@ using System.Collections;
 
 public class DeathBOX : MonoBehaviour 
 {
-
-
+	public GameObject player;
+	Vector3 startingPos;
 
 	// Use this for initialization
 	void Start () 
 	{
-	
+		player = GameObject.Find("OVRPlayerController");
 	}
 
 
@@ -21,6 +21,9 @@ public class DeathBOX : MonoBehaviour
 
 	void OnTriggerEnter()
 	{
-		Application.LoadLevel("scene1");
+		startingPos = new Vector3(24, 2, 7);
+
+		player.transform.position = startingPos;
+		//Application.LoadLevel("scene1");
 	}
 }

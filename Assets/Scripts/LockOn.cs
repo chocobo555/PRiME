@@ -87,7 +87,7 @@ public class LockOn : MonoBehaviour
 			Physics.Raycast(transform.position, fwd, out hit, lockOnRange, layerMask); 
 			if (hit.collider != null) 
 			{
-				scannerMonitor1.GetComponent<Text>().text = hit.collider.gameObject.name;
+				//scannerMonitor1.GetComponent<Text>().text = hit.collider.gameObject.name;
 				//scannedObject.text = hit.collider.gameObject.name;
 				//scannerMonitor2.GetComponent<Text>().text = hit.collider.gameObject.name;
 
